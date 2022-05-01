@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-dscal",
-  "version": "0.0.0",
+  "version": "0.0.8",
   "description": "Multiply a double-precision floating-point vector by a constant.",
   "license": "Apache-2.0",
   "author": {
