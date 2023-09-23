@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@esm/index.mjs';
+import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@v0.1.0-esm/index.mjs';
 ```
 
 #### dscal( N, alpha, x, stride )
@@ -157,7 +157,7 @@ dscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@esm/index.mjs';
+import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@v0.1.0-esm/index.mjs';
 
 var rand;
 var sign;
