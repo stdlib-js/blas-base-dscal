@@ -35,38 +35,30 @@ limitations under the License.
 
 > Multiply a double-precision floating-point vector `x` by a constant `alpha`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-dscal
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-dscal = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var dscal = require( 'path/to/vendor/umd/blas-base-dscal/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.dscal;
-})();
-</script>
+var dscal = require( '@stdlib/blas-base-dscal' );
 ```
 
 #### dscal( N, alpha, x, stride )
@@ -167,26 +159,18 @@ dscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
-var filledarrayBy = require( '@stdlib/array-filled-by' );
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
 var dscal = require( '@stdlib/blas-base-dscal' );
 
-var x = filledarrayBy( 10, 'float64', discreteUniform( -100, 100 ) );
+var opts = {
+    'dtype': 'float64'
+};
+var x = discreteUniform( 10, -100, 100, opts );
 console.log( x );
 
 dscal( x.length, 5.0, x, 1 );
 console.log( x );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -283,19 +267,19 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [dscal]: http://www.netlib.org/lapack/explore-html/de/da4/group__double__blas__level1.html
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/daxpy]: https://github.com/stdlib-js/blas-base-daxpy/tree/umd
+[@stdlib/blas/base/daxpy]: https://github.com/stdlib-js/blas-base-daxpy
 
-[@stdlib/blas/base/gscal]: https://github.com/stdlib-js/blas-base-gscal/tree/umd
+[@stdlib/blas/base/gscal]: https://github.com/stdlib-js/blas-base-gscal
 
-[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal/tree/umd
+[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal
 
-[@stdlib/blas/base/saxpy]: https://github.com/stdlib-js/blas-base-saxpy/tree/umd
+[@stdlib/blas/base/saxpy]: https://github.com/stdlib-js/blas-base-saxpy
 
 <!-- </related-links> -->
 
