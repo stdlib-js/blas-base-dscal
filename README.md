@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@esm/index.mjs';
+import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@v0.2.0-esm/index.mjs';
 ```
 
 #### dscal( N, alpha, x, stride )
@@ -150,7 +150,7 @@ dscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@esm/index.mjs';
+import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@v0.2.0-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
