@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-01)
+## Unreleased (2024-09-21)
+
+<section class="features">
+
+### Features
+
+-   [`b16259c`](https://github.com/stdlib-js/stdlib/commit/b16259ce187494c5274694cb9415fd254bb24e48) - add C `ndarray` implementation for `blas/base/dscal` [(#2915)](https://github.com/stdlib-js/stdlib/pull/2915)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`b16259c`](https://github.com/stdlib-js/stdlib/commit/b16259ce187494c5274694cb9415fd254bb24e48) - **feat:** add C `ndarray` implementation for `blas/base/dscal` [(#2915)](https://github.com/stdlib-js/stdlib/pull/2915) _(by Aman Bhansali)_
 -   [`2777e4b`](https://github.com/stdlib-js/stdlib/commit/2777e4be161869d09406e3b17947d24c64b47af2) - **bench:** resolve lint errors in benchmarks _(by Athan Reines)_
 
 </details>
@@ -24,8 +35,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Aman Bhansali
 -   Athan Reines
 
 </section>
