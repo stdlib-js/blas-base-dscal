@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-02-24)
+## Unreleased (2025-03-13)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`db9696d`](https://github.com/stdlib-js/stdlib/commit/db9696db44c79bfcb4cb0361d2666aab5724716f) - **docs:** update related packages sections [(#6007)](https://github.com/stdlib-js/stdlib/pull/6007) _(by stdlib-bot, Athan Reines)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
 -   [`b8c41df`](https://github.com/stdlib-js/stdlib/commit/b8c41df78cd2cdc9cd3c3c6b223759d32f4f6e14) - **docs:** update related packages sections [(#3915)](https://github.com/stdlib-js/stdlib/pull/3915) _(by stdlib-bot)_
 -   [`200e78a`](https://github.com/stdlib-js/stdlib/commit/200e78af939661bb4f435dc4f523cb57594c003e) - **docs:** add missing comma _(by Athan Reines)_
