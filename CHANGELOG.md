@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-07)
+## Unreleased (2025-12-05)
 
 <section class="features">
 
@@ -32,6 +32,8 @@
 
 <details>
 
+-   [`910cbfb`](https://github.com/stdlib-js/stdlib/commit/910cbfbf4c26253a403eb67512b6799ae8f3580e) - **bench:** refactor to use dynamic memory allocation in `blas/base/dscal` [(#8814)](https://github.com/stdlib-js/stdlib/pull/8814) _(by Krishna Awasthi)_
+-   [`11f3cfa`](https://github.com/stdlib-js/stdlib/commit/11f3cfa5a658d7cb105aeb2578b7d72ea62f1e97) - **refactor:** update include header guards for double precision real packages [(#7711)](https://github.com/stdlib-js/stdlib/pull/7711) _(by Shabareesh Shetty)_
 -   [`09c9ceb`](https://github.com/stdlib-js/stdlib/commit/09c9ceb58c6dd23c10f1980094851983c57d693f) - **chore:** fix formatting _(by Athan Reines)_
 -   [`51bf6f9`](https://github.com/stdlib-js/stdlib/commit/51bf6f9d2bb027aacecda87e02f957badbc246b0) - **bench:** fix formatting _(by Athan Reines)_
 -   [`05e83e1`](https://github.com/stdlib-js/stdlib/commit/05e83e1582cfeef43b39227e4a5c891f9934d1c0) - **fix:** resolve typo in include guard _(by Philipp Burckhardt)_
@@ -52,11 +54,13 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Aman Bhansali
 -   Athan Reines
+-   Krishna Awasthi
 -   Philipp Burckhardt
+-   Shabareesh Shetty
 
 </section>
 
