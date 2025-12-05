@@ -35,32 +35,14 @@ limitations under the License.
 
 > Multiply a double-precision floating-point vector `x` by a constant `alpha`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-base-dscal
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var dscal = require( '@stdlib/blas-base-dscal' );
+import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@deno/mod.js';
 ```
 
 #### dscal( N, alpha, x, stride )
@@ -68,7 +50,7 @@ var dscal = require( '@stdlib/blas-base-dscal' );
 Multiplies a double-precision floating-point vector `x` by a constant `alpha`.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ] );
 
@@ -86,7 +68,7 @@ The function has the following parameters:
 The `N` and `stride` parameters determine which elements in `x` are accessed at runtime. For example, to multiply every other value by a constant
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ] );
 
@@ -97,7 +79,7 @@ dscal( 4, 5.0, x, 2 );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Initial array...
 var x0 = new Float64Array( [ 1.0, -2.0, 3.0, -4.0, 5.0, -6.0 ] );
@@ -117,7 +99,7 @@ If `N` is less than or equal to `0`, the function returns `x` unchanged.
 Multiplies a double-precision floating-point vector `x` by a constant `alpha` using alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ] );
 
@@ -132,7 +114,7 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the `offset` parameter supports indexing semantics based on a starting index. For example, to multiply the last three elements of `x` by a constant
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var x = new Float64Array( [ 1.0, -2.0, 3.0, -4.0, 5.0, -6.0 ] );
 
@@ -162,8 +144,8 @@ dscal.ndarray( 3, 5.0, x, 1, x.length-3 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var dscal = require( '@stdlib/blas-base-dscal' );
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
+import dscal from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dscal@deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
@@ -181,130 +163,7 @@ console.log( x );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/base/dscal.h"
-```
-
-#### c_dscal( N, alpha, \*X, stride )
-
-Multiplies each element of a double-precision floating-point vector by a constant.
-
-```c
-double x[] = { 1.0, 2.0, 3.0, 4.0 };
-
-c_dscal( 4, 5.0, x, 1 );
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **alpha**: `[in] double` scalar constant.
--   **X**: `[inout] double*` input array.
--   **stride**: `[in] CBLAS_INT` index increment for `X`.
-
-```c
-void c_dscal( const CBLAS_INT N, const double alpha, double *X, const CBLAS_INT stride );
-```
-
-#### c_dscal_ndarray( N, alpha, \*X, stride, offset )
-
-Multiplies each element of a double-precision floating-point vector by a constant using alternative indexing semantics.
-
-```c
-double x[] = { 1.0, 2.0, 3.0, 4.0 };
-
-c_dscal_ndarray( 4, 5.0, x, 1, 0 );
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **alpha**: `[in] double` scalar constant.
--   **X**: `[inout] double*` input array.
--   **stride**: `[in] CBLAS_INT` index increment for `X`.
--   **offset**: `[in] CBLAS_INT` starting index for `X`.
-
-```c
-void c_dscal_ndarray( const CBLAS_INT N, const double alpha, double *X, const CBLAS_INT stride, const CBLAS_INT offset );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/base/dscal.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Create a strided array:
-    double x[] = { 1.0, -2.0, 3.0, -4.0, 5.0, -6.0, 7.0, -8.0 };
-
-    // Specify the number of elements:
-    const int N = 8;
-
-    // Specify a stride:
-    const int stride = 1;
-
-    // Scale the vector:
-    c_dscal( N, 5.0, x, stride );
-
-    // Print the result:
-    for ( int i = 0; i < 8; i++ ) {
-        printf( "x[ %i ] = %lf\n", i, x[ i ] );
-    }
-
-    // Scale the vector:
-    c_dscal_ndarray( N, 5.0, x, -stride, N-1 );
-
-    // Print the result:
-    for ( int i = 0; i < 8; i++ ) {
-        printf( "x[ %i ] = %lf\n", i, x[ i ] );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -332,7 +191,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -399,19 +258,19 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [dscal]: http://www.netlib.org/lapack/explore-html/de/da4/group__double__blas__level1.html
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/deno
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/daxpy]: https://github.com/stdlib-js/blas-base-daxpy
+[@stdlib/blas/base/daxpy]: https://github.com/stdlib-js/blas-base-daxpy/tree/deno
 
-[@stdlib/blas/base/gscal]: https://github.com/stdlib-js/blas-base-gscal
+[@stdlib/blas/base/gscal]: https://github.com/stdlib-js/blas-base-gscal/tree/deno
 
-[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal
+[@stdlib/blas/base/sscal]: https://github.com/stdlib-js/blas-base-sscal/tree/deno
 
-[@stdlib/blas/base/saxpy]: https://github.com/stdlib-js/blas-base-saxpy
+[@stdlib/blas/base/saxpy]: https://github.com/stdlib-js/blas-base-saxpy/tree/deno
 
 <!-- </related-links> -->
 
